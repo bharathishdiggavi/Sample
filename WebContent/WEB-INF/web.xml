@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+	<display-name>PracticeWeb</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+	<filter>
+		<filter-name>login</filter-name>
+		<filter-class>com.servlets.SimpleFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>login</filter-name>
+		<url-pattern>/simple/*</url-pattern>
+		<servlet-name>SimpleJsp</servlet-name>
+	</filter-mapping>
+	<servlet>
+		<servlet-name>Simple</servlet-name>
+		<servlet-class>com.servlets.SimpleServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Simple</servlet-name>
+		<url-pattern>/simple/simple1</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>com.servlets.LoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SimpleJsp</servlet-name>
+		<jsp-file>/NewFile.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SimpleJsp</servlet-name>
+		<url-pattern>/simple/jsp1</url-pattern>
+	</servlet-mapping>
+</web-app>
