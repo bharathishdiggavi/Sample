@@ -11,7 +11,7 @@ import javax.servlet.http.HttpSession;
 public class LoginServlet extends HttpServlet {
 	
 	@Override
-	public void init() throws ServletException {
+	 public void init() throws ServletException {
 		System.out.println("Inside init()...");
 	}
 
